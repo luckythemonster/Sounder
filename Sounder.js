@@ -151,33 +151,3 @@ export class Sounder {
     return maxIndex;
   }
 }
-3. Usage Example
-
-You can test the logic directly like this:
-
-import { Sounder } from './Sounder.js';
-
-const brain = new Sounder();
-
-// Example Modules dataset: 
-// Index 0: Play Music intent
-// Index 1: Weather intent
-// Index 2: Time intent
-brain.setDataset([
-  ['play', 'song', 'music', 'track'],
-  ['what', 'weather', 'forecast', 'rain'],
-  ['what', 'time', 'clock']
-]);
-
-// 1. User says something
-const userInput = "Can you play some good music please";
-
-// 2. Filter stop words
-const { keyWords } = brain.filter(userInput);
-// keyWords = ['can', 'play', 'some', 'good', 'music', 'please']
-
-// 3. Search dataset to find the matching module index
-const predictedModuleIndex = brain.search(keyWords);
-
-console.log(`Matched Module Index: ${predictedModuleIndex}`); 
-// Should output 0 (The Play Music intent)
