@@ -1,7 +1,7 @@
 {
   "dependencies": {
-    "munkres": "^2.1.1",
-    "string-similarity": "^4.0.4"
+    "dice-coefficient": "^2.1.1",
+    "munkres": "^2.1.1"
   },
   "name": "app",
   "version": "1.0.0",

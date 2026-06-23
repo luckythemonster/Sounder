@@ -1,5 +1,5 @@
 import munkres from 'munkres';
-import stringSimilarity from 'string-similarity';
+import { diceCoefficient } from 'dice-coefficient';
 
 export class Sounder {
   constructor(dataset = []) {
@@ -110,7 +110,7 @@ export class Sounder {
 
   loop2(kWord, sWord) {
     // Equivalent to difflib.SequenceMatcher.ratio() * 100
-    const ratio = stringSimilarity.compareTwoStrings(kWord, sWord);
+    const ratio = diceCoefficient(kWord, sWord);
     return Math.round(ratio * 100);
   }
 

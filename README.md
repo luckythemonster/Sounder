@@ -9,15 +9,15 @@ Because Python's sounder.py relied on two major external libraries (difflib.Sequ
 
 If you are building a modern web app (React, Vue, or just vanilla JS with a bundler), you should install these two lightweight equivalents:
 
-npm install munkres string-similarity
-(Note: string-similarity uses Dice's Coefficient which behaves very similarly to Python's difflib.SequenceMatcher.ratio() for word matching).
+npm install munkres dice-coefficient
+(Note: dice-coefficient uses Dice's Coefficient which behaves very similarly to Python's difflib.SequenceMatcher.ratio() for word matching).
 
 2. The Sounder.js Class
 
 Save this as Sounder.js in your project:
 
 import munkres from 'munkres';
-import stringSimilarity from 'string-similarity';
+import { diceCoefficient } from 'dice-coefficient';
 
 export class Sounder {
   constructor(dataset = []) {
@@ -128,7 +128,7 @@ export class Sounder {
 
   loop2(kWord, sWord) {
     // Equivalent to difflib.SequenceMatcher.ratio() * 100
-    const ratio = stringSimilarity.compareTwoStrings(kWord, sWord);
+    const ratio = diceCoefficient(kWord, sWord);
     return Math.round(ratio * 100);
   }
 
