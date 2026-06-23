@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "munkres": "^2.1.1",
+    "string-similarity": "^4.0.4"
+  },
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Adapted from Stephanie-va",
+  "main": "Sounder.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luckythemonster/Sounder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/luckythemonster/Sounder/issues"
+  },
+  "homepage": "https://github.com/luckythemonster/Sounder#readme"
+}
